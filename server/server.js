@@ -8,7 +8,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: process.env.CORS_ORIGIN || true }));
+app.use(cors({
+  origin: "https://info-hub-git-main-darshans-projects-d895b122.vercel.app", // your Vercel URL
+  methods: "GET,POST",
+  credentials: true
+}));
+
 app.use(express.json());
 
 const QUOTES = [
