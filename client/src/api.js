@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "" });
+const api = axios.create({ baseURL: "https://infohub-tt4s.onrender.com" });
 
 export const fetchQuote = () => api.get("/api/quote").then((r) => r.data);
 export const fetchWeather = (city) =>
